@@ -10,8 +10,6 @@ class Employee extends Person {
   public int price;
 }
 
-class Manager extends Employee { }
-
 class Product {
   public String name;
   public String price;

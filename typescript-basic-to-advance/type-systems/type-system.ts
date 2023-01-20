@@ -13,8 +13,6 @@ class Employee extends Person {
   public price: number;
 }
 
-class Manager extends Employee { }
-
 class Product {
   public name: string;
   public price: number;

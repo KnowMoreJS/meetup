@@ -34,6 +34,7 @@
   let color = "red"
 
   message = "Hello, World"
+  message = 123
   console.log(message, color);
 
 }
