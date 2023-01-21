@@ -1,10 +1,13 @@
-// Array of objects
+// Arrays
 {
+
+    const fileExtensions = ["js", "ts"]
     interface User {
         name?: string;
         id: string;
     }
     const users: User[] = [];
+    const newUsers: Array<User> = [];
 }
 
 
@@ -13,37 +16,31 @@
 // TUPLE
 {
 
-    type point2D = [number, number];
-
-    function setPoint(coord: point2D) {
-        const x = coord[0];
-        const y = coord[1];
-        // index past the number of elements -> error
-        // const z = coord[2];
-        console.log({ x, y });
-    }
+    //          [Year, Make,     Model    ]
+    let myCar = [2002, "Toyota", "Corolla"]
+    // destructured assignment is convenient here!
+    const [year, make, model] = myCar
 
 
-    // optional property at the end of tuple
-    type Either2dOr3d = [number, number, number?];
+    type Car =[number, string, string];
 
-    function setCoordinate([x, y, z]: Either2dOr3d) {
-        console.log({ x, y, z });
-    }
+    let myNewCar: Car = [
+        2002,
+        "Toyota",
+        "Corolla",
+    ]
+
+    myNewCar[0]
+
+    // ERROR: not the right convention
+    myNewCar = ["Honda", 2017, "Accord"]
+
+    // Typescipt checks for no of arguments also
+    const numPair: [number, number] = [4, 5, 6]
+
+    // Limitation is this does not account for
+    // any modifications using operations such as push and pop
+    numPair.pop()
 
 
-    // readonly tuples #1
-    function doSomething(pair: readonly [string, number]) {
-    //   pair[0] = 'newString';
-    }
-
-
-    // readonly tuples #2
-    let point = [3, 4] as const;
-
-    function distanceFromOrigin([x, y]: [number, number]) {
-    return Math.sqrt(x ** 2 + y ** 2);
-    }
-
-    // distanceFromOrigin(point);
 }
