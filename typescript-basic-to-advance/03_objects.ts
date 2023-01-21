@@ -15,30 +15,43 @@
 // type aliases
 {
   type UserContactInfo = {
-    name: string
-    email: string
+    name: string;
+    email: string;
   }
+
+  // inheritence
+  type UserData = {
+    profileUrl: string;
+    postIds: string[];
+  }
+
+  const user: UserContactInfo & UserData = {
+    name: 'my name',
+    email: 'email@email.com',
+  }
+
+  user
 }
 
 // interfaces
 {
   interface UserInfo {
-    name: string
-    email: string
+    name: string;
+    email: string;
   }
 
   // Inheritence
 
   interface Animal {
-    isAlive(): boolean
+    isAlive(): boolean;
   }
 
   interface Mammal extends Animal {
-    getFurOrHairColor(): string
+    getFurOrHairColor(): string;
   }
 
   interface Dog extends Mammal {
-    getBreed(): string
+    getBreed(): string;
   }
 
   // implements
@@ -49,10 +62,10 @@
 
   class Dog implements AnimalLike {
     bark() {
-      return "woof"
+      return "woof";
     }
     eat(food) {
-      
+
     }
   }
 
@@ -63,15 +76,15 @@
 {
   const phones: {
     [k: string]: {
-      country: string
-      area: string
-      number: string
+      country: string;
+      area: string;
+      number: string;
     }
   } = {
     home: { country: "+1", area: "211", number: "652-4515" },
     work: { country: "+1", area: "670", number: "752-5856" },
     fax: { country: "+1", area: "322", number: "525-4357" },
-  }
+  };
 
-  phones.new
+  phones.new;
 }

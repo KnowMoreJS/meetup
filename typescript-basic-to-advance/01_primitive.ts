@@ -158,3 +158,4 @@
 }
 
 // There is an intersection type too
+// will see this in objects section
